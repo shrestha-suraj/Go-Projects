@@ -1,0 +1,34 @@
+{{define "ShresthaSurajGoTemplates"}}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Go Templates HW1</title>
+</head>
+
+<body>
+    <center>
+        <h2>Ole Miss Computer Science Core Course 8130</h2>
+        <table border=1>
+            <thread>
+                <tr>
+                    <td>Code</td>
+                    <td>Title</td>
+                    <td>Semester</td>
+                </tr>
+            </thread>
+            <tbody>
+                {{range.}}
+                <tr>
+                    <td>{{.Code}}</td>
+                    <td>{{.Title}}</td>
+                    <td>{{.Semester}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>
+{{end}}
