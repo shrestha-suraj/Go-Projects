@@ -14,7 +14,7 @@ type Course struct {
 
 var tmpl = template.Must(template.ParseGlob("templates/*"))
 
-func GoTemp(w http.ResponseWriter, r *http.Request) {
+func GoTemplatesHW(w http.ResponseWriter, r *http.Request) {
 	C := []Course{}
 	C = append(C, (Course{Code: "CSCI 111", Title: "Computer Science I", Semester: "Fall & Spring"}))
 	C = append(C, (Course{Code: "CSCI 112", Title: "Computer Science II", Semester: "Fall & Spring"}))

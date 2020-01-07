@@ -1,0 +1,30 @@
+{{ define "index.html" }}
+  {{ template "header" }}
+	<div class="row">
+	<center>
+	<h2> Here is Who's Who </h2>
+	<table border=0>
+     <thead>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+ 		<td></td><td></td>
+     </tr>
+     </thead>
+	 <tbody>
+    {{ range . }}
+		<tr>
+        <td>{{ .FirstName }}</td>
+        <td>{{ .LastName }}</td>
+        <td><a href="edit.html?id={{.PersonID}}">Edit</a></td>
+		<td><a href="index.html?id={{.PersonID}}" onclick=”return confirm(‘Are you sure you want to delete?’">Delete</a></td>
+    {{ end }}
+     </tbody>
+	</table>
+
+	<a href="create.html">Add a person</a>
+
+	 </center>
+	</div>
+  {{ template "footer" }}
+{{ end }}

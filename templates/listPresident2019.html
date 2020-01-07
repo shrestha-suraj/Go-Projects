@@ -1,0 +1,34 @@
+{{define "listPresident2019.html"}}
+{{template "header"}}
+	<div class="row">
+		<center>
+		<h2>Here is Your President</h2>
+		<table border=1>
+		<thread>
+		<tr>
+		<td>Name</td>
+		<td>State</td>
+		<td>Party</td>
+		<td>Term(s)</td>
+		<td>Starting Year</td>
+		<td>Ending Year</td>
+		</tr>
+		</thread>
+		<tbody>
+		{{range.}}
+		<tr>
+		<td>{{.FName}}{{.MInitial}}{{.LName}}</td>
+		<td>{{.State}}</td>
+		<td>{{.Party}}</td>
+		<td>{{.Term}}</td>
+		<td>{{.Start}}</td>
+		<td>{{.End}}</td>
+		</tr>
+		{{end}}
+		</tbody>
+		</table>
+		</center>
+	</div>
+
+{{template "footer"}}
+{{end}}

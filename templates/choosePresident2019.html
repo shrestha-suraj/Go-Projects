@@ -1,0 +1,39 @@
+{{define "choosePresident2019.html"}}
+{{template "header"}}
+
+	<form method="POST" action="listPresident2019.html">
+		<div class="row">
+		<label for="left-label" class="left inline">
+		<h2>Pick Your President</h2>
+		Choose your president: <select name="ID">
+		<option></option>
+		{{range.}}
+		<option>{{.Num}}</option>
+		{{end}}
+		</select>
+		<p/><hr>&nbsp;&nbsp;&nbsp;<b>OR</b> &nbsp;&nbsp;fill in zero or more values below<hr><p/>
+		<p>First Name: <input type=text name="FName"></p>
+		<p>Last Name: <input type=text name="LName"></p>
+		<p>State : <input type=text name="State"></p>
+		<p>Party: <input type=text name="Party"></p>
+		<p>Term Number: <select name="Term">
+			<option></option>
+			{{range.}}<option>{{.Term}}</option>{{end}}
+		</select>
+		</p>
+		<p>Starting year of presidency:(YYYY) <select name="Start">
+			<option></option>
+			{{range.}}<option>{{.Start}}</option>{{end}}
+		</select>
+		<p>Ending year of presidency: (YYYY) <select name="End">
+			<option></option>
+			{{range.}}<option>{{.End}}</option>{{end}}
+		</select><br/><br/><br/>
+		<input type="submit" name="submit" class="button tiny round" value="Find a President"/>
+		</label>
+		</div>
+	</form>
+
+
+{{template "footer"}}
+{{end}}
